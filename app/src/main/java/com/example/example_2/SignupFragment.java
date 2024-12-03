@@ -32,8 +32,6 @@ public class SignupFragment extends Fragment {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
-
-
     public SignupFragment() {
         // Required empty public constructor
     }
@@ -123,7 +121,9 @@ public class SignupFragment extends Fragment {
 
     public static boolean isValidEmail(String email) {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
+
     }
+
 
     private boolean checkPassword() {
         if (password.length() < 6){
